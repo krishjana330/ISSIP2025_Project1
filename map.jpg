@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f4f4f4"/>
+  <rect x="50" y="50" width="700" height="400" fill="#e0e0e0" stroke="#f16c08" stroke-width="2"/>
+  <circle cx="400" cy="250" r="10" fill="#f16c08"/>
+  <text x="400" y="230" font-family="Arial" font-size="16" fill="#0e090b" text-anchor="middle">RIT Kosovo</text>
+  <text x="400" y="280" font-family="Arial" font-size="12" fill="#0e090b" text-anchor="middle">Germia Campus, Pristina</text>
+  <text x="400" y="450" font-family="Arial" font-size="20" fill="#0e090b" text-anchor="middle">Conference Venue Map</text>
+  <line x1="100" y1="150" x2="300" y2="150" stroke="#0e090b" stroke-width="2"/>
+  <line x1="500" y1="150" x2="700" y2="150" stroke="#0e090b" stroke-width="2"/>
+  <line x1="100" y1="350" x2="300" y2="350" stroke="#0e090b" stroke-width="2"/>
+  <line x1="500" y1="350" x2="700" y2="350" stroke="#0e090b" stroke-width="2"/>
+</svg>

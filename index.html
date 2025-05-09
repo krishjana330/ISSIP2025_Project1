@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISSIP 2025 - International Symposium on Signal and Image Processing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="conference-logo">
+                    <h1>ISSIP <span>2025</span></h1>
+                </div>
+                <div class="university-logo">
+                    <img src="University LOGO.png" alt="RIT Kosovo Logo">
+                </div>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#symposia">SYMPOSIA-WORKSHOP</a></li>
+                    <li><a href="#committees">COMMITTEES</a></li>
+                    <li class="dropdown">
+                        <a href="#special-session">SPECIAL SESSION <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#special-session-format">Special Session Format</a></li>
+                            <li><a href="#accepted-special-session">Accepted Special Session</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#plenary">PLENARY SPEAKERS</a></li>
+                    <li><a href="#proceedings">PROCEEDINGS</a></li>
+                    <li><a href="#venue">VENUE</a></li>
+                    <li><a href="#format">FORMAT</a></li>
+                    <li><a href="#deadline">DEADLINE</a></li>
+                    <li><a href="#fees">FEES</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>International Symposium on Signal and Image Processing</h1>
+                <h2>ISSIP 2025</h2>
+                <p>Hosted by RIT Kosovo</p>
+                <div class="countdown-container">
+                    <div class="countdown-title">Conference Starts In:</div>
+                    <div id="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                    <a href="#" class="btn btn-secondary">Submit Paper</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-slider">
+            <div class="slide active">
+                <img src="Image1.jpg" alt="Conference Image 1">
+            </div>
+            <div class="slide">
+                <img src="Image2.jpg" alt="Conference Image 2">
+            </div>
+            <div class="slide">
+                <img src="Image3.jpg" alt="Conference Image 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call for Papers Section -->
+    <section id="symposia" class="section">
+        <div class="container">
+            <h2 class="section-title">Call for Papers</h2>
+            <p class="section-description">Topics of interest will fall under one or more of the symposium tracks.</p>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>Digital Signal Processing</h3>
+                    <ul>
+                        <li>Robust and low complexity filter design</li>
+                        <li>Signal reconstruction</li>
+                        <li>Filter bank theory and wavelets</li>
+                    </ul>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Statistical Signal Processing</h3>
+                    <ul>
+                        <li>Adaptive filtering</li>
+                        <li>Learning algorithms for neural networks</li>
+                        <li>Hybrid soft computing techniques</li>
+                        <li>Spectrum estimation and modeling</li>
+                        <li>Sensor array processing with applications in sonar and radar</li>
+                    </ul>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Image Processing</h3>
+                    <ul>
+                        <li>Image restoration</li>
+                        <li>Image compression</li>
+                        <li>Image segmentation</li>
+                        <li>Image quality evaluation</li>
+                        <li>Computer vision and medical imaging</li>
+                        <li>Character recognition</li>
+                        <li>Remote Sensing Imagery</li>
+                    </ul>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Speech Processing</h3>
+                    <ul>
+                        <li>Modeling</li>
+                        <li>Compression</li>
+                        <li>Speech recognition</li>
+                    </ul>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Video Processing</h3>
+                    <ul>
+                        <li>Video compression</li>
+                        <li>Analysis and processing</li>
+                        <li>3D video compression</li>
+                        <li>Automated and distributed crowd analytics</li>
+                        <li>Stereo-to-auto stereoscopic 3D video conversion</li>
+                        <li>Virtual and augmented reality</li>
+                    </ul>
+                </div>
+                
+                <div class="topic-card">
+                    <h3>Data Processing and Analysis</h3>
+                    <ul>
+                        <li>IoT and Big data analysis</li>
+                        <li>Portfolio data analysis</li>
+                        <li>Blockchain applications to data analysis</li>
+                        <li>Data visualization</li>
+                        <li>Optimization strategies in engineering, business and health</li>
+                        <li>Digital/HR based data analysis management</li>
+                        <li>Infrastructure and data centers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Section -->
+    <section id="format" class="section">
+        <div class="container">
+            <h2 class="section-title">Submission</h2>
+            <div class="submission-content">
+                <p>The authors are invited to submit the Full papers of the Research/Review Papers. The papers will be peer-reviewed and only the accepted and registered papers will be considered for presentation during the conference and publication in the proceedings.</p>
+                <p>All submissions should be made through the Microsoft CMT link <a href="https://cmt3.research.microsoft.com/ISSIP2025" target="_blank">https://cmt3.research.microsoft.com/ISSIP2025</a></p>
+                <p>Paper is in a Springer template using the following template only:</p>
+                <div class="template-buttons">
+                    <a href="#" class="btn btn-secondary">Word Template Download</a>
+                    <a href="#" class="btn btn-secondary">LATEX Template Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committees Section -->
+    <section id="committees" class="section">
+        <div class="container">
+            <h2 class="section-title">Committees</h2>
+            <div class="committee-grid">
+                <div class="committee-card">
+                    <h3>General Chair</h3>
+                    <ul>
+                        <li>Prof. John Doe, RIT Kosovo</li>
+                        <li>Prof. Jane Smith, University of Pristina</li>
+                    </ul>
+                </div>
+                <div class="committee-card">
+                    <h3>Program Committee</h3>
+                    <ul>
+                        <li>Dr. Alice Johnson, University of London</li>
+                        <li>Dr. Bob Williams, MIT</li>
+                        <li>Dr. Carol Brown, Stanford University</li>
+                    </ul>
+                </div>
+                <div class="committee-card">
+                    <h3>Organizing Committee</h3>
+                    <ul>
+                        <li>Dr. David Miller, RIT Kosovo</li>
+                        <li>Dr. Eva Garcia, University of Barcelona</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Session Section -->
+    <section id="special-session" class="section">
+        <div class="container">
+            <h2 class="section-title">Special Session</h2>
+            
+            <div id="special-session-format" class="subsection">
+                <h3 class="subsection-title">Special Session Format</h3>
+                <div class="special-session-content">
+                    <p>Special sessions complement the regular program of the conference and provide a sample of the state-of-the-art research in both theoretical and application areas.</p>
+                    <p>The aim of special sessions is to provide a focused discussion on innovative topics. A special session proposal should include the session title, a brief description of the scope and motivation, biographic and contact information of the organizers.</p>
+                    <p>Each special session should include at least 4 papers. Once a special session proposal is accepted, the organizers will be responsible for the advertisement, paper reviewing and paper collection.</p>
+                </div>
+            </div>
+            
+            <div id="accepted-special-session" class="subsection">
+                <h3 class="subsection-title">Accepted Special Session</h3>
+                <div class="special-session-list">
+                    <div class="special-session-item">
+                        <h4>Smart Finances: Web-Based Systems for Personalized Financial Management</h4>
+                        <p>Organizers: Dr. Michael Johnson, London Metropolitan University, UK</p>
+                        <p>Description: This special session focuses on innovative web-based systems for personal and corporate financial management, exploring the intersection of financial technology, data analytics, and user experience design.</p>
+                    </div>
+                    <div class="special-session-item">
+                        <h4>Advanced Image Processing Techniques for Medical Applications</h4>
+                        <p>Organizers: Dr. Sarah Chen, Stanford University, USA</p>
+                        <p>Description: This session explores cutting-edge image processing algorithms and their applications in medical diagnostics, treatment planning, and healthcare management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plenary Speakers Section -->
+    <section id="plenary" class="section">
+        <div class="container">
+            <h2 class="section-title">Plenary Speakers</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="speaker1.jpg" alt="Speaker 1">
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Prof. Ashish Mani, Ph.D.</h3>
+                        <p class="speaker-title">Professor</p>
+                        <p class="speaker-affiliation">AIDC & Department of Electrical Electronics Engineering</p>
+                        <p class="speaker-institution">Amity University, India</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="speaker2.jpg" alt="Speaker 2">
+                    </div>
+                    <div class="speaker-info">
+                        <h3>SK Hafizul Islam, Ph.D., SMIEEE</h3>
+                        <p class="speaker-title">Associate Professor</p>
+                        <p class="speaker-affiliation">Department of Computer Science and Engineering</p>
+                        <p class="speaker-institution">Indian Institute of Information Technology Kalyani, India</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="speaker3.jpg" alt="Speaker 3">
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Hana Qerimi</h3>
+                        <p class="speaker-title">CoFounder / CEO</p>
+                        <p class="speaker-affiliation">Starlabs & Digital School</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceedings Section -->
+    <section id="proceedings" class="section">
+        <div class="container">
+            <h2 class="section-title">Proceedings</h2>
+            <div class="proceedings-content">
+                <p>All accepted papers will be published in the conference proceedings, which will be submitted for inclusion in major indexing services including Scopus, Web of Science, and IEEE Xplore.</p>
+                <p>Selected high-quality papers will be invited for possible publication in special issues of reputed international journals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="section">
+        <div class="container">
+            <h2 class="section-title">Venue</h2>
+            <div class="venue-content">
+                <div class="venue-info">
+                    <h3>RIT Kosovo</h3>
+                    <p>Germia Campus</p>
+                    <p>Pristina, 10000</p>
+                    <p>Kosovo</p>
+                </div>
+                <div class="venue-map">
+                    <!-- Placeholder for map -->
+                    <img src="map.jpg" alt="Conference Venue Map">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deadline Section -->
+    <section id="deadline" class="section">
+        <div class="container">
+            <h2 class="section-title">Important Dates</h2>
+            <div class="deadlines-grid">
+                <div class="deadline-item">
+                    <h3>Paper Submission Deadline</h3>
+                    <p>January 15, 2025</p>
+                </div>
+                <div class="deadline-item">
+                    <h3>Notification of Acceptance</h3>
+                    <p>February 28, 2025</p>
+                </div>
+                <div class="deadline-item">
+                    <h3>Camera-Ready Submission</h3>
+                    <p>March 15, 2025</p>
+                </div>
+                <div class="deadline-item">
+                    <h3>Early Bird Registration</h3>
+                    <p>March 30, 2025</p>
+                </div>
+                <div class="deadline-item">
+                    <h3>Conference Dates</h3>
+                    <p>May 15-17, 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section id="fees" class="section">
+        <div class="container">
+            <h2 class="section-title">Registration Fees</h2>
+            <div class="fees-table-container">
+                <table class="fees-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Early Bird (Before March 30, 2025)</th>
+                            <th>Regular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IEEE Member</td>
+                            <td>€300</td>
+                            <td>€350</td>
+                        </tr>
+                        <tr>
+                            <td>Non-IEEE Member</td>
+                            <td>€350</td>
+                            <td>€400</td>
+                        </tr>
+                        <tr>
+                            <td>Student IEEE Member</td>
+                            <td>€200</td>
+                            <td>€250</td>
+                        </tr>
+                        <tr>
+                            <td>Student Non-IEEE Member</td>
+                            <td>€250</td>
+                            <td>€300</td>
+                        </tr>
+                        <tr>
+                            <td>Additional Paper</td>
+                            <td>€150</td>
+                            <td>€150</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>issip2025@rit.edu</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+383 XX XXX XXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>RIT Kosovo, Germia Campus, Pristina, Kosovo</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ISSIP 2025</h2>
+                    <p>International Symposium on Signal and Image Processing</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#symposia">Call for Papers</a></li>
+                        <li><a href="#committees">Committees</a></li>
+                        <li><a href="#special-session">Special Session</a></li>
+                        <li><a href="#plenary">Plenary Speakers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ISSIP. All Rights Reserved. Hosted by RIT Kosovo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
