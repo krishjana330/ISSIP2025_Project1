@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Image Slider
+    // Image Slider for Background Images
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
     
@@ -101,10 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
     
-    // Change image every 5 seconds
+    // Start the slider with longer transition time for background images
     if (slides.length > 0) {
         showSlide(currentSlide);
-        setInterval(nextSlide, 5000);
+        setInterval(nextSlide, 8000); // Increased from 5000ms to 8000ms for smoother transitions
     }
     
     // Form Submission

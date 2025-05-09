@@ -221,14 +221,29 @@ nav {
     padding-top: 80px;
     display: flex;
     align-items: center;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.7);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(14, 9, 11, 0.7), rgba(14, 9, 11, 0.4));
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-content {
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: 800px;
     margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .hero-content h1 {
@@ -262,7 +277,8 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .slide {
@@ -272,17 +288,24 @@ nav {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 2s ease-in-out;
+    transform: scale(1.05);
+    background-size: cover;
+    background-position: center;
 }
 
 .slide.active {
-    opacity: 0.3;
+    opacity: 0.8;
+    transform: scale(1);
+    transition: opacity 2s ease-in-out, transform 8s ease-out;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.85);
+    display: block;
 }
 
 /* Countdown Styles */
