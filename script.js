@@ -1,7 +1,7 @@
 // Countdown Timer
 document.addEventListener('DOMContentLoaded', function() {
-    // Set the conference date - May 15, 2025
-    const conferenceDate = new Date('May 15, 2025 09:00:00').getTime();
+    // Set the conference date - November 24, 2025
+    const conferenceDate = new Date('November 24, 2025 09:00:00').getTime();
     
     // Update the countdown every second
     const countdownTimer = setInterval(function() {
