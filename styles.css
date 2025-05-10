@@ -159,6 +159,11 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+.conference-logo img {
+    max-width: 60px; /* Adjust as needed */
+    height: auto;
+    animation: fadeInRight 0.5s ease;
+}
 
 .conference-logo h1 {
     font-size: 2rem;
