@@ -1,5 +1,44 @@
 // Countdown Timer
 document.addEventListener('DOMContentLoaded', function() {
+    // Committee section toggle functionality
+    const committeeHeaders = document.querySelectorAll('.committee-header');
+    const toggleAllBtn = document.querySelector('.toggle-all-btn');
+    let isAllExpanded = false;
+
+    // Individual committee toggle
+    committeeHeaders.forEach(header => {
+        header.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent triggering the toggle-all when clicking individual headers
+            const content = this.nextElementSibling;
+            const toggleBtn = this.querySelector('.toggle-btn i');
+            
+            content.classList.toggle('collapsed');
+            toggleBtn.style.transform = content.classList.contains('collapsed') ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+    });
+
+    // Toggle all committees
+    toggleAllBtn.addEventListener('click', function() {
+        const allContents = document.querySelectorAll('.committee-content');
+        const allToggleBtns = document.querySelectorAll('.toggle-btn i');
+        isAllExpanded = !isAllExpanded;
+
+        allContents.forEach(content => {
+            if (isAllExpanded) {
+                content.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+            }
+        });
+
+        allToggleBtns.forEach(btn => {
+            btn.style.transform = isAllExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+
+        // Update main toggle button
+        this.querySelector('i').style.transform = isAllExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+
     // Set the conference date - November 24, 2025
     const conferenceDate = new Date('November 24, 2025 09:00:00').getTime();
     

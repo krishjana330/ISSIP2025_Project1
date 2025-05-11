@@ -14,6 +14,7 @@
         <div class="container">
             <div class="d-flex align-items-center">
                 <a class="navbar-brand me-2" href="#home">
+                    <img src="ISSIPLOGO2.png" alt="ISSIP Logo" class="navbar-logo">
                 </a>
             </div>
             <nav>
@@ -37,7 +38,7 @@
                         </ul>
                     </li>
                     <li><a href="#registration">REGISTRATION</a></li>
-                    <li><a href="#deadline">DETES</a></li>
+                    <li><a href="#deadline">DATES</a></li>
                     <li><a href="#proceedings">PUBLICATION</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
@@ -90,33 +91,64 @@
         </div>
     </section>
 
-    <!-- Welcome Section -->
-    <section id="welcome" class="section">
+    <!-- About the Conference Section -->
+    <section id="welcome" class="section about-conference">
         <div class="container">
-            <h2 class="section-title">Welcome to ISSIP 2025</h2>
-            <div class="welcome-content">
-                <p>The 2025 Fifth International Symposium on Signal and Image Processing (ISSIP 2025) is aimed to foster the field of signal and image processing encompassing the theory and practice of algorithms and hardware that convert signals produced by artificial or natural means into a form useful for specific purpose.</p>
-                <p>The signals might be speech, audio, images, video, sensor data, telemetry, electrocardiograms, or seismic data among others. The possible application areas include transmission, display, storage, interpretation, classification, segmentation, or diagnosis.</p>
-                <p>The Rochester Institute of Technology Kosovo (A.U.K), Kosovo, Europe, organized the symposium on November 24-25, 2025. The main objective of the symposium is to provide a platform for young researchers to showcase their inventions and innovations in the field of signal and image processing which may be used by mankind.</p>
-                <p>ISSIP 2025 is technically sponsored by the IEEE Computational Intelligence Society, Kolkata Chapter, IEEE CIS Kolkata Chapter, and the Asia-Pacific Artificial Intelligence Association (AAIA), Kolkata Branch.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Welcome to ISSIP 2025</h2>
+                    <div class="welcome-content">
+                        <p>The 2025 Fifth International Symposium on Signal and Image Processing (ISSIP 2025) is aimed to foster the field of signal and image processing encompassing the theory and practice of algorithms and hardware that convert signals produced by artificial or natural means into a form useful for specific purpose.</p>
+                        <p>The signals might be speech, audio, images, video, sensor data, telemetry, electrocardiograms, or seismic data among others. The possible application areas include transmission, display, storage, interpretation, classification, segmentation, or diagnosis.</p>
+                        <p>The Rochester Institute of Technology Kosovo (A.U.K), Kosovo, Europe, organized the symposium on November 24-25, 2025. The main objective of the symposium is to provide a platform for young researchers to showcase their inventions and innovations in the field of signal and image processing which may be used by mankind.</p>
+                        <p>ISSIP 2025 is technically sponsored by the IEEE Computational Intelligence Society, Kolkata Chapter, IEEE CIS Kolkata Chapter, and the Asia-Pacific Artificial Intelligence Association (AAIA), Kolkata Branch.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="ISSIP Old/issip 4.jpg" alt="ISSIP Conference" class="conference-image">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- About RIT Kosovo Section -->
+    <section id="venue" class="section about-rit">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="rit.jpg" alt="RIT Kosovo Campus" class="rit-image">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About RIT Kosovo</h2>
+                    <div class="venue-content">
+                        <!-- Content will be filled later -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <!-- Committees Section -->
 <section id="committees" class="section">
     <div class="container">
         <h2 class="section-title">ISSIP - 2025 Committee</h2>
+        <div class="committee-main-header">
+            <button class="toggle-all-btn"><i class="fas fa-chevron-down"></i> Toggle All Committees</button>
+        </div>
     
-  
   <!-- Committee Members -->
   <section class="container my-5">
     <div class="row">
       <!-- Honorary Chairs -->
       <div class="col-12">
         <div class="committee-card">
-          <h4>Honorary Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Honorary Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Besnik Bislimi Ph.D., Deputy Prime Minister, Republic of Kosovo</li>
           </ul>
         </div>
@@ -125,8 +157,12 @@
       <!-- General Chairs -->
       <div class="col-12">
         <div class="committee-card">
-          <h4>General Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>General Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Kamal Shahrabi, President, Rochester Institute of Technology, Kosovo</li>
           </ul>
         </div>
@@ -135,8 +171,12 @@
       <!-- Program Chairs -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Program Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Program Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Albina Balidemaj, Dean of Faculty, Rochester Institute of Technology, Kosovo</li>
             <li>Venera Demukaj, Rochester Institute of Technology, Kosovo</li>
           </ul>
@@ -146,8 +186,12 @@
       <!-- Conveners -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Conveners</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Conveners</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Debabrata Samanta, Rochester Institute of Technology, Kosovo</li>
             <li>Siddhartha Bhattacharyya, Senior Researcher, VSB - Technical University of Ostrava, Czechia</li>
           </ul>
@@ -157,8 +201,12 @@
       <!-- Publication Chairs -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Publication Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Publication Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Blerta Prevalla Etemi, Rochester Institute of Technology, Kosovo</li>
           </ul>
         </div>
@@ -167,8 +215,12 @@
       <!-- Session Chairs -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Session Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Session Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Edmond Muhaxheri, Rochester Institute of Technology, Kosovo</li>
             <li>Ines Bula, Rochester Institute of Technology, Kosovo</li>
             <li>Mimoza Polloshka, Rochester Institute of Technology, Kosovo</li>
@@ -182,8 +234,12 @@
       <!-- Organizing Secretary -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Organizing Secretary</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Organizing Secretary</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Lindita Bicaj, Rochester Institute of Technology, Kosovo</li>
           </ul>
         </div>
@@ -192,8 +248,12 @@
       <!-- Organizing Committee -->
       <div class="col-12">
         <div class="committee-card">
-          <h4>Organizing Committee</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Organizing Committee</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Arlinda Hajdari, Rochester Institute of Technology, Kosovo</li>
             <li>Agon Nimani, Rochester Institute of Technology, Kosovo</li>
             <li>Driart Elshani, Rochester Institute of Technology, Kosovo</li>
@@ -211,8 +271,12 @@
       <!-- Publicity and Sponsorship Chairs -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Publicity and Sponsorship Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Publicity and Sponsorship Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Zylfije Muçolli, Rochester Institute of Technology, Kosovo</li>
             <li>Alba Ymerhalili, Rochester Institute of Technology, Kosovo</li>
             <li>Ardit Kalaja, Rochester Institute of Technology, Kosovo</li>
@@ -223,8 +287,12 @@
       <!-- Local Hospitality Chairs -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Local Hospitality Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Local Hospitality Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Lindita Bicaj, Rochester Institute of Technology, Kosovo</li>
             <li>Arlinda Hajdari, Rochester Institute of Technology, Kosovo</li>
             <li>Lavon Bajrami, Rochester Institute of Technology, Kosovo</li>
@@ -236,8 +304,12 @@
       <!-- Finance Chairs -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>Finance Chairs</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Finance Chairs</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Ajten Cami, Rochester Institute of Technology, Kosovo</li>
             <li>Teuta Vitia, Rochester Institute of Technology, Kosovo</li>
           </ul>
@@ -247,8 +319,12 @@
       <!-- Technical Program Committee -->
        <div class="col-12">
         <div class="committee-card">
-          <h4>Technical Program Committee</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>Technical Program Committee</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Naim Fejzullahu, Rochester Institute of Technology, Kosovo</li>
             <li>Leonard Camaj, Rochester Institute of Technology, Kosovo</li>
             <li>Gani Shasivari, Rochester Institute of Technology, Kosovo</li>
@@ -291,8 +367,12 @@
       <!-- International Advisory Committee Chair -->
       <div class="col-md-6">
         <div class="committee-card">
-          <h4>International Advisory Committee Chair</h4>
-          <ul>
+          <div class="committee-header">
+            <h4>International Advisory Committee Chair</h4>
+            <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="committee-content collapsed">
+            <ul>
             <li>Prof. Ramesh Chandra Poonia, CHRIST (Deemed to be University), India</li>
           </ul>
         </div>
@@ -301,8 +381,12 @@
       <!-- International Advisory Committee -->
      <div class="col-12">
     <div class="committee-card">
-      <h4>International Advisory Committee</h4>
-      <ul>
+      <div class="committee-header">
+        <h4>International Advisory Committee</h4>
+        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div class="committee-content collapsed">
+        <ul>
         <li>Prof. Ramesh Chandra Poonia</li>
         <li>Prof. Sankar K. Pal, Indian Statistical Institute, Kolkata, India</li>
         <li>Prof. Nikhil Ranjan Pal, Indian Statistical Institute, Kolkata, India</li>
