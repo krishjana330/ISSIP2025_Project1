@@ -59,7 +59,8 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -221,6 +222,9 @@ header .container {
 
 .about-text {
     flex: 1;
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .about-image {
@@ -332,7 +336,8 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -1172,6 +1177,12 @@ nav {
     align-items: center;
 }
 
+.about-text .venue-content {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+}
+
 .venue-info {
     padding: 20px;
 }
@@ -1405,118 +1416,21 @@ nav {
 
 /* Footer Styles */
 footer {
-    background: #2c3e50;
-    color: white;
-    padding: 60px 0 30px;
-    position: relative;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.footer-column h3 {
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-column h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 2px;
-    background: var(--primary-color);
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #ecf0f1;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Registration Form Styles */
-.registration-form {
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-control {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: border 0.3s;
-}
-
-.form-control:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-.submit-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background: #2980b9;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .section {
-        padding: 60px 0;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .registration-form {
-        padding: 30px 20px;
-    }
-}
-footer {
     background-color: var(--secondary-color);
     color: var(--light-color);
     padding: 60px 0 20px;
+    width: 100%;
+    margin: 0;
 }
 
 .footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
-    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .footer-logo h2 {
