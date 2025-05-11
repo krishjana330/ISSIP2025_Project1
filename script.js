@@ -1,194 +1,121 @@
-// Countdown Timer
-document.addEventListener('DOMContentLoaded', function() {
-    // Committee section toggle functionality
-    const committeeHeaders = document.querySelectorAll('.committee-header');
-    const toggleAllBtn = document.querySelector('.toggle-all-btn');
-    let isAllExpanded = false;
+// Initialize sections
+const sections = document.querySelectorAll('.section');
+sections.forEach(section => {
+    section.style.display = 'block';
+});
 
-    // Individual committee toggle
-    committeeHeaders.forEach(header => {
-        header.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent triggering the toggle-all when clicking individual headers
-            const content = this.nextElementSibling;
-            const toggleBtn = this.querySelector('.toggle-btn i');
-            
-            content.classList.toggle('collapsed');
-            toggleBtn.style.transform = content.classList.contains('collapsed') ? 'rotate(0deg)' : 'rotate(180deg)';
-        });
+// Initialize image slider
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Initialize countdown timer
+function updateCountdown() {
+    const conferenceDate = new Date('November 24, 2025 00:00:00').getTime();
+    const now = new Date().getTime();
+    const timeLeft = conferenceDate - now;
+    
+    if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').innerText = days.toString().padStart(2, '0');
+        document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+    }
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Toggle committee content
+const toggleButtons = document.querySelectorAll('.toggle-btn');
+toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.parentElement.nextElementSibling;
+        content.classList.toggle('collapsed');
+        this.querySelector('i').classList.toggle('fa-chevron-up');
+        this.querySelector('i').classList.toggle('fa-chevron-down');
     });
+});
 
-    // Toggle all committees
+// Toggle all committees
+const toggleAllBtn = document.querySelector('.toggle-all-btn');
+if (toggleAllBtn) {
     toggleAllBtn.addEventListener('click', function() {
         const allContents = document.querySelectorAll('.committee-content');
-        const allToggleBtns = document.querySelectorAll('.toggle-btn i');
-        isAllExpanded = !isAllExpanded;
-
+        const isAnyCollapsed = Array.from(allContents).some(content => content.classList.contains('collapsed'));
+        
         allContents.forEach(content => {
-            if (isAllExpanded) {
+            if (isAnyCollapsed) {
                 content.classList.remove('collapsed');
             } else {
                 content.classList.add('collapsed');
             }
         });
-
-        allToggleBtns.forEach(btn => {
-            btn.style.transform = isAllExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+        
+        const allIcons = document.querySelectorAll('.toggle-btn i');
+        allIcons.forEach(icon => {
+            if (isAnyCollapsed) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
         });
-
-        // Update main toggle button
-        this.querySelector('i').style.transform = isAllExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
-    });
-
-    // Set the conference date - November 24, 2025
-    const conferenceDate = new Date('November 24, 2025 09:00:00').getTime();
-    
-    // Update the countdown every second
-    const countdownTimer = setInterval(function() {
-        // Get today's date and time
-        const now = new Date().getTime();
         
-        // Find the distance between now and the conference date
-        const distance = conferenceDate - now;
-        
-        // Time calculations for days, hours, minutes and seconds
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        // Display the result
-        document.getElementById('days').innerHTML = days < 10 ? '0' + days : days;
-        document.getElementById('hours').innerHTML = hours < 10 ? '0' + hours : hours;
-        document.getElementById('minutes').innerHTML = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById('seconds').innerHTML = seconds < 10 ? '0' + seconds : seconds;
-        
-        // If the countdown is finished, display a message
-        if (distance < 0) {
-            clearInterval(countdownTimer);
-            document.getElementById('countdown').innerHTML = "<h3>The Conference Has Started!</h3>";
+        const toggleAllIcon = this.querySelector('i');
+        if (isAnyCollapsed) {
+            toggleAllIcon.classList.remove('fa-chevron-down');
+            toggleAllIcon.classList.add('fa-chevron-up');
+        } else {
+            toggleAllIcon.classList.remove('fa-chevron-up');
+            toggleAllIcon.classList.add('fa-chevron-down');
         }
-    }, 1000);
-    
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const dropdowns = document.querySelectorAll('.dropdown');
-    const header = document.querySelector('header');
+    });
+}
 
-    // Mobile menu toggle with animation
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+if (menuToggle) {
     menuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-        
-        // Animate nav items when menu opens
-        const navItems = document.querySelectorAll('.nav-menu > li');
-        navItems.forEach((item, index) => {
-            if (navMenu.classList.contains('active')) {
-                item.style.animation = `fadeInDown 0.5s ease forwards ${index * 0.1}s`;
-            } else {
-                item.style.animation = '';
-            }
-        });
+        this.querySelector('i').classList.toggle('fa-bars');
+        this.querySelector('i').classList.toggle('fa-times');
     });
+}
 
-    // Mobile dropdown toggle
-    if (window.innerWidth <= 991) {
-        dropdowns.forEach(dropdown => {
-            const dropdownLink = dropdown.querySelector('a');
-            dropdownLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                const dropdownMenu = this.nextElementSibling;
-                const isOpen = dropdown.classList.contains('active');
-
-                // Close all other dropdowns
-                dropdowns.forEach(d => {
-                    if (d !== dropdown) {
-                        d.classList.remove('active');
-                        d.querySelector('.dropdown-menu').style.maxHeight = '0px';
-                    }
-                });
-
-                // Toggle current dropdown
-                dropdown.classList.toggle('active');
-                dropdownMenu.style.maxHeight = isOpen ? '0px' : `${dropdownMenu.scrollHeight}px`;
-            });
-        });
-    }
-    
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            // Only prevent default if it's not a dropdown toggle on mobile
-            if (!(this.parentNode.classList.contains('dropdown') && window.innerWidth <= 768)) {
-                e.preventDefault();
-                
-                // Close mobile menu if open
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    menuToggle.querySelector('i').classList.add('fa-bars');
-                    menuToggle.querySelector('i').classList.remove('fa-times');
-                }
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Adjust for header height
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-    
-    // Image Slider for Background Images
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-    
-    function showSlide(n) {
-        // Remove active class from all slides
-        slides.forEach(slide => {
-            slide.classList.remove('active');
-        });
-        
-        // Show the current slide
-        slides[n].classList.add('active');
-    }
-    
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-    
-    // Start the slider with longer transition time for background images
-    if (slides.length > 0) {
-        showSlide(currentSlide);
-        setInterval(nextSlide, 8000); // Increased from 5000ms to 8000ms for smoother transitions
-    }
-    
-    // Form Submission
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+// Handle mobile dropdowns
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991 && e.target.tagName === 'A' && e.target.parentElement.classList.contains('dropdown')) {
             e.preventDefault();
-            
-            // Here you would normally send the form data to a server
-            // For now, just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
-    }
-    
-    // Header Scroll Effect
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.style.padding = '10px 0';
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.padding = '15px 0';
-            header.style.boxShadow = 'none';
+            this.classList.toggle('active');
         }
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 991 && !e.target.closest('.nav-menu') && !e.target.closest('.menu-toggle')) {
+        navMenu.classList.remove('active');
+        menuToggle.querySelector('i').classList.remove('fa-times');
+        menuToggle.querySelector('i').classList.add('fa-bars');
+    }
 });
