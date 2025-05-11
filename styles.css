@@ -1,3 +1,31 @@
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
 /* Global Styles */
 :root {
     --primary-color: #f16c08;
@@ -154,32 +182,7 @@ header {
     transition: var(--transition);
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.conference-logo img {
-    max-width: 60px; /* Adjust as needed */
-    height: auto;
-    animation: fadeInRight 0.5s ease;
-}
 
-.conference-logo h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    animation: fadeInDown 0.5s ease;
-}
-
-.conference-logo span {
-    color: var(--primary-color);
-}
-
-.university-logo img {
-    height: 50px;
-    margin-left: 20px;
-    animation: fadeInRight 0.5s ease;
-}
 
 nav {
     display: flex;
@@ -1150,10 +1153,7 @@ footer {
         padding: 10px 0;
     }
     
-    .logo-container {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+
     
     .menu-toggle {
         display: block;
