@@ -18,6 +18,25 @@ function nextSlide() {
 setInterval(nextSlide, 5000);
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    scrollToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
     // Countdown Timer
     const countdownDate = new Date('November 24, 2025 00:00:00').getTime();
     

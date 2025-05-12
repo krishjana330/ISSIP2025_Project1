@@ -222,7 +222,6 @@ header .container {
 
 .about-text {
     flex: 1;
-    text-align: left;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -265,16 +264,43 @@ header .container {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     padding: 30px 0;
     background-color: #f8d56f;
     border-radius: 8px;
     margin: 20px 0;
 }
 
+.conference-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.conference-book {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.conference-book:hover {
+    transform: scale(1.05);
+}
+
+.book-image {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 .conference-item {
     text-decoration: none;
     transition: var(--transition);
+    width: 100%;
 }
 
 .conference-box {
@@ -523,27 +549,7 @@ img {
     transform: translateY(0);
 }
 
-.coming-soon-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
 
-.coming-soon-overlay h2 {
-    color: var(--light-color);
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    animation: pulse 2s infinite;
-}
 
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -1497,21 +1503,28 @@ nav {
 
 /* Contact Section */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--gray-color);
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .contact-item i {
@@ -1525,36 +1538,6 @@ nav {
     justify-content: center;
     background-color: rgba(241, 108, 8, 0.1);
     border-radius: 50%;
-}
-
-.contact-form {
-    background-color: var(--gray-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
 }
 
 /* Footer Styles */
@@ -1812,4 +1795,42 @@ footer {
     .section-title {
         font-size: 1.8rem;
     }
+    
+    .conference-wrapper {
+        width: 100%;
+    }
+    
+    .book-image {
+        width: 90px;
+    }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary-color);
 }
